@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sys_thermal_control_list>
+    <version>2025060516</version>
+    <filter-name>sys_thermal_control_list</filter-name>
+
+    <featureConfigItem>
+        <hyst_temperature intVal="2" /><!-- 迟滞温度 -->
+        <btn_experience_toggle booleanVal="true" /><!-- 亮度体验开关 -->
+        <scene_switch_protection_period intVal="30" /><!-- 场景切换保护,单位s -->
+        <support_refresh_rate stringVal="60,120" /><!-- 项目支持的刷新率 -->
+        <support_max_brightness floatVal="255" /><!-- 项目最大亮度 -->
+    </featureConfigItem>
+
+    <feature name="level">
+        <config name="thermal_cpu_level">
+            <!-- Pay attention to the order of numbers：maxCpuCore="silver,gold,prime" maxCpuFreq="silver,gold,prime" -->
+            <!--
+                以8核，2簇为例
+                index：                 *** 档位定级评审 ***
+                maxCpuCore：            每簇Cpu核开关，-1不限制/0关/（1~X）开核数
+                maxCpuFreq：            Cpu最大频点限制
+                fpsGo：                 fpsGo开关，*** 研究MTK fpsGo处理 ***
+            -->
+            <level index ="0" maxCpuCore ="-1,-1" maxCpuFreq="2000000,2600000" fpsGo="-1" />
+            <level index ="1" maxCpuCore ="-1,-1" maxCpuFreq="2000000,2300000" fpsGo="-1" />
+            <level index ="2" maxCpuCore ="-1,-1" maxCpuFreq="2000000,2150000" fpsGo="-1" />
+            <level index ="3" maxCpuCore ="-1,-1" maxCpuFreq="1800000,1950000" fpsGo="-1" />
+            <level index ="4" maxCpuCore ="-1,-1" maxCpuFreq="1800000,1750000" fpsGo="-1" />
+            <level index ="5" maxCpuCore ="-1,-1" maxCpuFreq="1800000,1550000" fpsGo="-1" />
+            <level index ="6" maxCpuCore ="-1,1" maxCpuFreq="1600000,1350000" fpsGo="-1" />
+            <level index ="7" maxCpuCore ="-1,1" maxCpuFreq="1400000,1250000" fpsGo="-1" />
+            <level index ="8" maxCpuCore ="-1,1" maxCpuFreq="1200000,1200000" fpsGo="-1" />
+            <level index ="9" maxCpuCore ="-1,0" maxCpuFreq="1000000,00000" fpsGo="-1" />
+        </config>
+        <config name="thermal_gpu_level">
+            <!--
+                index：                 *** 档位定级评审 ***
+                maxGpuFreq：            Gpu最大频点限制
+            -->
+            <level index="0" maxGpuFreq="950000" />
+            <level index="1" maxGpuFreq="855000" />
+            <level index="2" maxGpuFreq="750000" />
+            <level index="3" maxGpuFreq="660000" />
+            <level index="4" maxGpuFreq="547000" />
+        </config>
+        <config name="temperature_level">
+            <level index="0" />
+        </config>
+    </feature>
+
+    <thermalPolicyConfigItem>
+        <globalTemplate>
+            <globalPolicy>
+                <!--
+                    tempGear:		温度触发档位；起始25，对应0档
+                    restrict:		进程自清理档位：0 ~ 5档；cpu占用阈值查杀，5档会杀前台
+                    cpuLevel：		配置CPU档位，跟随项目，-1不限制
+                    gpuLevel：		配置GPU档位，跟随项目，-1不限制
+                    cameraLevel：	配置camera档位，0 ~ 4档；组合开关（闪光灯、录像、相机）
+                    fps：		屏幕刷新率 60、90、120
+                    charge：		充电档位，0.1A/档；单位加密（15 -> 1.5A），-1不限制
+                    brightness：   	背光亮度档位，0 ~ 255档，-1不限制
+                    modem：        	开关5G，0关/1开，-1不限制
+                    torch：        	开关手电筒，0关/1开，-1不限制
+                    bluetooth:		开关蓝牙，0关/1开，-1不限制
+                    wifiHotSpot:	开关热点，0关/1开，-1不限制
+                -->
+                <gear_config tempGear="0" restrict="0" cpuLevel="-1" gpuLevel="-1" cameraLevel="0" fps="-1" charge="-1" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+            </globalPolicy>
+        </globalTemplate>
+
+        <specific>
+            <com.kiloo.subwaysurf>
+                <gear_config tempGear="10" restrict="0" cpuLevel="-1" gpuLevel="-1" fps="-1" charge="12" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="13" restrict="0" cpuLevel="1" gpuLevel="-1" fps="-1" charge="12" brightness="230" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="15" restrict="1" cpuLevel="2" gpuLevel="-1" fps="-1" charge="10" brightness="230" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="16" restrict="0" cpuLevel="3" gpuLevel="-1" fps="60" charge="10" brightness="230" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="17" restrict="0" cpuLevel="3" gpuLevel="-1" fps="60" charge="10" brightness="230" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="18" restrict="1" cpuLevel="3" gpuLevel="-1" fps="60" charge="8" brightness="204" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="19" restrict="0" cpuLevel="3" gpuLevel="-1" fps="60" charge="8" brightness="204" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="20" restrict="2" cpuLevel="5" gpuLevel="-1" fps="60" charge="6" brightness="178" modem="-1" torch="0" bluetooth="0" wifiHotSpot="-1" />
+                <gear_config tempGear="23" restrict="3" cpuLevel="7" gpuLevel="-1" fps="60" charge="6" brightness="178" modem="-1" torch="0" bluetooth="0" wifiHotSpot="0" />
+            </com.kiloo.subwaysurf>
+            <com.instagram.android>
+                <gear_config tempGear="5" restrict="1" cpuLevel="1" gpuLevel="-1" fps="-1" charge="15" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="7" restrict="0" cpuLevel="2" gpuLevel="-1" fps="-1" charge="15" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="9" restrict="0" cpuLevel="3" gpuLevel="-1" fps="-1" charge="15" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="10" restrict="1" cpuLevel="4" gpuLevel="-1" fps="-1" charge="12" brightness="230" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="12" restrict="1" cpuLevel="4" gpuLevel="-1" fps="-1" charge="12" brightness="204" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="13" restrict="0" cpuLevel="5" gpuLevel="-1" fps="-1" charge="12" brightness="204" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="15" restrict="2" cpuLevel="5" gpuLevel="-1" fps="-1" charge="10" brightness="204" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="16" restrict="0" cpuLevel="5" gpuLevel="-1" fps="60" charge="10" brightness="178" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="17" restrict="2" cpuLevel="6" gpuLevel="-1" fps="60" charge="10" brightness="178" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="18" restrict="0" cpuLevel="6" gpuLevel="-1" fps="60" charge="8" brightness="178" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="19" restrict="2" cpuLevel="7" gpuLevel="-1" fps="60" charge="8" brightness="178" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="20" restrict="0" cpuLevel="8" gpuLevel="-1" fps="60" charge="8" brightness="153" modem="-1" torch="0" bluetooth="0" wifiHotSpot="-1" />
+                <gear_config tempGear="23" restrict="3" cpuLevel="9" gpuLevel="-1" fps="60" charge="8" brightness="153" modem="-1" torch="0" bluetooth="0" wifiHotSpot="0" />
+            </com.instagram.android>
+            <com.google.android.youtube-com.ss.android.ugc.aweme-in.amazon.mShop.android.shopping-com.zhiliaoapp.musically-com.facebook.katana-com.android.chrome-com.whatsapp>
+                <gear_config tempGear="5" restrict="1" cpuLevel="-1" gpuLevel="-1" fps="-1" charge="15" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="7" restrict="0" cpuLevel="1" gpuLevel="-1" fps="-1" charge="15" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="9" restrict="0" cpuLevel="1" gpuLevel="-1" fps="-1" charge="15" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="10" restrict="1" cpuLevel="2" gpuLevel="-1" fps="-1" charge="12" brightness="230" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="13" restrict="0" cpuLevel="3" gpuLevel="-1" fps="-1" charge="12" brightness="230" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="15" restrict="2" cpuLevel="3" gpuLevel="-1" fps="-1" charge="10" brightness="204" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="16" restrict="0" cpuLevel="4" gpuLevel="-1" fps="60" charge="10" brightness="204" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="17" restrict="2" cpuLevel="5" gpuLevel="-1" fps="60" charge="10" brightness="178" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="18" restrict="0" cpuLevel="6" gpuLevel="-1" fps="60" charge="8" brightness="178" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="19" restrict="2" cpuLevel="7" gpuLevel="-1" fps="60" charge="8" brightness="178" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="20" restrict="0" cpuLevel="8" gpuLevel="-1" fps="60" charge="8" brightness="153" modem="-1" torch="0" bluetooth="0" wifiHotSpot="-1" />
+                <gear_config tempGear="23" restrict="3" cpuLevel="9" gpuLevel="-1" fps="60" charge="8" brightness="153" modem="-1" torch="0" bluetooth="0" wifiHotSpot="0" />
+            </com.google.android.youtube-com.ss.android.ugc.aweme-in.amazon.mShop.android.shopping-com.zhiliaoapp.musically-com.facebook.katana-com.android.chrome-com.whatsapp>
+            <com.mediatek.camera>
+                <gear_config tempGear="10" restrict="0" cpuLevel="1" gpuLevel="-1" cameraLevel="0" fps="-1" charge="12" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="13" restrict="0" cpuLevel="3" gpuLevel="-1" cameraLevel="0" fps="-1" charge="12" brightness="204" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="15" restrict="1" cpuLevel="5" gpuLevel="-1" cameraLevel="0" fps="60" charge="10" brightness="178" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="16" restrict="0" cpuLevel="6" gpuLevel="-1" cameraLevel="0" fps="60" charge="10" brightness="178" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="17" restrict="0" cpuLevel="6" gpuLevel="-1" cameraLevel="0" fps="60" charge="10" brightness="178" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="18" restrict="1" cpuLevel="6" gpuLevel="-1" cameraLevel="0" fps="60" charge="8" brightness="178" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="19" restrict="0" cpuLevel="6" gpuLevel="-1" cameraLevel="0" fps="60" charge="8" brightness="178" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="20" restrict="2" cpuLevel="7" gpuLevel="-1" cameraLevel="1" fps="60" charge="6" brightness="178" modem="-1" torch="-1" bluetooth="0" wifiHotSpot="-1" />
+                <gear_config tempGear="21" restrict="2" cpuLevel="7" gpuLevel="-1" cameraLevel="0" fps="60" charge="6" brightness="178" modem="-1" torch="-1" bluetooth="0" wifiHotSpot="-1" />
+                <gear_config tempGear="23" restrict="2" cpuLevel="7" gpuLevel="-1" cameraLevel="2" fps="60" charge="6" brightness="153" modem="-1" torch="-1" bluetooth="0" wifiHotSpot="0" />
+                <gear_config tempGear="24" restrict="3" cpuLevel="7" gpuLevel="-1" cameraLevel="3" fps="60" charge="0" brightness="153" modem="-1" torch="-1" bluetooth="0" wifiHotSpot="0" />
+                <gear_config tempGear="26" restrict="3" cpuLevel="7" gpuLevel="-1" cameraLevel="3" fps="60" charge="0" brightness="153" modem="-1" torch="-1" bluetooth="0" wifiHotSpot="0" />
+                <gear_config tempGear="28" restrict="3" cpuLevel="7" gpuLevel="-1" cameraLevel="4" fps="60" charge="0" brightness="153" modem="-1" torch="-1" bluetooth="0" wifiHotSpot="0" />
+            </com.mediatek.camera>
+        </specific>
+        <category>
+            <category_2>
+                <gear_config tempGear="5" restrict="1" cpuLevel="-1" gpuLevel="-1" fps="-1" charge="15" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="7" restrict="0" cpuLevel="1" gpuLevel="-1" fps="-1" charge="15" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="9" restrict="0" cpuLevel="1" gpuLevel="-1" fps="-1" charge="15" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="10" restrict="1" cpuLevel="2" gpuLevel="-1" fps="-1" charge="15" brightness="230" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="13" restrict="0" cpuLevel="3" gpuLevel="-1" fps="90" charge="15" brightness="230" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="15" restrict="2" cpuLevel="3" gpuLevel="-1" fps="90" charge="15" brightness="204" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="16" restrict="0" cpuLevel="3" gpuLevel="-1" fps="60" charge="15" brightness="204" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="17" restrict="2" cpuLevel="4" gpuLevel="-1" fps="60" charge="15" brightness="178" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="18" restrict="0" cpuLevel="5" gpuLevel="-1" fps="60" charge="15" brightness="178" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="19" restrict="2" cpuLevel="6" gpuLevel="-1" fps="60" charge="15" brightness="178" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="20" restrict="0" cpuLevel="7" gpuLevel="-1" fps="60" charge="15" brightness="153" modem="-1" torch="0" bluetooth="0" wifiHotSpot="-1" />
+                <gear_config tempGear="23" restrict="3" cpuLevel="8" gpuLevel="-1" fps="60" charge="15" brightness="153" modem="-1" torch="0" bluetooth="0" wifiHotSpot="0" />
+            </category_2>
+            <category_3>
+                <gear_config tempGear="10" restrict="0" cpuLevel="-1" gpuLevel="-1" fps="-1" charge="15" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="13" restrict="0" cpuLevel="1" gpuLevel="-1" fps="90" charge="15" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="15" restrict="1" cpuLevel="2" gpuLevel="-1" fps="90" charge="15" brightness="230" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="16" restrict="0" cpuLevel="3" gpuLevel="-1" fps="60" charge="15" brightness="230" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="17" restrict="0" cpuLevel="3" gpuLevel="-1" fps="60" charge="15" brightness="230" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="18" restrict="1" cpuLevel="4" gpuLevel="-1" fps="60" charge="15" brightness="204" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="19" restrict="0" cpuLevel="4" gpuLevel="-1" fps="60" charge="15" brightness="204" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="20" restrict="2" cpuLevel="6" gpuLevel="-1" fps="60" charge="15" brightness="178" modem="-1" torch="0" bluetooth="0" wifiHotSpot="-1" />
+                <gear_config tempGear="23" restrict="3" cpuLevel="8" gpuLevel="-1" fps="60" charge="15" brightness="178" modem="-1" torch="0" bluetooth="0" wifiHotSpot="0" />
+            </category_3>
+            <category_4>
+                <gear_config tempGear="5" restrict="1" cpuLevel="-1" gpuLevel="-1" fps="-1" charge="15" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="7" restrict="0" cpuLevel="1" gpuLevel="-1" fps="-1" charge="15" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="9" restrict="0" cpuLevel="2" gpuLevel="-1" fps="-1" charge="15" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="10" restrict="0" cpuLevel="3" gpuLevel="-1" fps="-1" charge="15" brightness="204" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="13" restrict="0" cpuLevel="3" gpuLevel="-1" fps="90" charge="15" brightness="204" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="15" restrict="1" cpuLevel="3" gpuLevel="-1" fps="90" charge="15" brightness="204" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="16" restrict="0" cpuLevel="4" gpuLevel="-1" fps="60" charge="15" brightness="204" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="17" restrict="0" cpuLevel="4" gpuLevel="-1" fps="60" charge="15" brightness="204" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="18" restrict="1" cpuLevel="5" gpuLevel="-1" fps="60" charge="15" brightness="204" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="19" restrict="0" cpuLevel="5" gpuLevel="-1" fps="60" charge="15" brightness="204" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="20" restrict="2" cpuLevel="5" gpuLevel="-1" fps="60" charge="15" brightness="178" modem="-1" torch="0" bluetooth="0" wifiHotSpot="-1" />
+                <gear_config tempGear="23" restrict="3" cpuLevel="5" gpuLevel="-1" fps="60" charge="15" brightness="178" modem="-1" torch="0" bluetooth="0" wifiHotSpot="0" />
+            </category_4>
+            <category_7>
+                <gear_config tempGear="10" restrict="0" cpuLevel="-1" gpuLevel="-1" fps="60" charge="15" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="13" restrict="0" cpuLevel="-1" gpuLevel="-1" fps="60" charge="15" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="15" restrict="1" cpuLevel="-1" gpuLevel="-1" fps="60" charge="15" brightness="230" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="16" restrict="0" cpuLevel="-1" gpuLevel="-1" fps="60" charge="15" brightness="230" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="17" restrict="0" cpuLevel="-1" gpuLevel="-1" fps="60" charge="15" brightness="230" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="18" restrict="1" cpuLevel="-1" gpuLevel="-1" fps="60" charge="15" brightness="204" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="19" restrict="0" cpuLevel="-1" gpuLevel="-1" fps="60" charge="15" brightness="204" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="20" restrict="2" cpuLevel="-1" gpuLevel="-1" fps="60" charge="15" brightness="178" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="23" restrict="0" cpuLevel="-1" gpuLevel="-1" fps="60" charge="15" brightness="178" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="24" restrict="3" cpuLevel="-1" gpuLevel="-1" fps="60" charge="15" brightness="153" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="26" restrict="3" cpuLevel="-1" gpuLevel="-1" fps="60" charge="15" brightness="153" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="28" restrict="3" cpuLevel="-1" gpuLevel="-1" fps="60" charge="15" brightness="153" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+            </category_7>
+            <category_9>
+                <gear_config tempGear="10" restrict="0" cpuLevel="-1" gpuLevel="-1" fps="60" charge="15" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="13" restrict="0" cpuLevel="-1" gpuLevel="-1" fps="60" charge="15" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="15" restrict="0" cpuLevel="-1" gpuLevel="-1" fps="60" charge="15" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="16" restrict="0" cpuLevel="-1" gpuLevel="-1" fps="60" charge="15" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="17" restrict="0" cpuLevel="-1" gpuLevel="-1" fps="60" charge="15" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="18" restrict="0" cpuLevel="-1" gpuLevel="-1" fps="60" charge="15" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="19" restrict="0" cpuLevel="-1" gpuLevel="-1" fps="60" charge="15" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="20" restrict="0" cpuLevel="-1" gpuLevel="-1" fps="60" charge="15" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="23" restrict="3" cpuLevel="-1" gpuLevel="-1" fps="60" charge="15" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="24" restrict="3" cpuLevel="-1" gpuLevel="-1" fps="60" charge="15" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="26" restrict="3" cpuLevel="-1" gpuLevel="-1" fps="60" charge="15" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="28" restrict="3" cpuLevel="-1" gpuLevel="-1" fps="60" charge="15" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+            </category_9>
+            <category_11-category_12-category_13-category_14>
+                <gear_config tempGear="5" restrict="1" cpuLevel="-1" gpuLevel="-1" fps="-1" charge="15" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="7" restrict="0" cpuLevel="1" gpuLevel="-1" fps="-1" charge="15" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="9" restrict="0" cpuLevel="1" gpuLevel="-1" fps="-1" charge="15" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="10" restrict="1" cpuLevel="2" gpuLevel="-1" fps="-1" charge="15" brightness="230" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="13" restrict="0" cpuLevel="3" gpuLevel="-1" fps="90" charge="15" brightness="230" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="15" restrict="2" cpuLevel="3" gpuLevel="-1" fps="90" charge="15" brightness="204" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="16" restrict="0" cpuLevel="4" gpuLevel="-1" fps="60" charge="15" brightness="204" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="17" restrict="2" cpuLevel="4" gpuLevel="-1" fps="60" charge="15" brightness="178" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="18" restrict="0" cpuLevel="5" gpuLevel="-1" fps="60" charge="15" brightness="178" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="19" restrict="2" cpuLevel="6" gpuLevel="-1" fps="60" charge="15" brightness="178" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="20" restrict="0" cpuLevel="7" gpuLevel="-1" fps="60" charge="15" brightness="153" modem="-1" torch="0" bluetooth="0" wifiHotSpot="-1" />
+                <gear_config tempGear="23" restrict="3" cpuLevel="8" gpuLevel="-1" fps="60" charge="15" brightness="153" modem="-1" torch="0" bluetooth="0" wifiHotSpot="0" />
+            </category_11-category_12-category_13-category_14>
+        </category>
+        <environment>
+            <screen_off-screen_off_in_charge-screen_lock_in_charge>
+                <gear_config tempGear="10" restrict="0" cpuLevel="-1" gpuLevel="-1" fps="60" charge="-1" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="13" restrict="0" cpuLevel="-1" gpuLevel="-1" fps="60" charge="40" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="15" restrict="0" cpuLevel="-1" gpuLevel="-1" fps="60" charge="30" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="16" restrict="0" cpuLevel="-1" gpuLevel="-1" fps="60" charge="20" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="17" restrict="0" cpuLevel="-1" gpuLevel="-1" fps="60" charge="20" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="18" restrict="0" cpuLevel="-1" gpuLevel="-1" fps="60" charge="20" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="19" restrict="0" cpuLevel="-1" gpuLevel="-1" fps="60" charge="20" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="20" restrict="0" cpuLevel="-1" gpuLevel="-1" fps="60" charge="20" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="23" restrict="3" cpuLevel="-1" gpuLevel="-1" fps="60" charge="20" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="24" restrict="3" cpuLevel="-1" gpuLevel="-1" fps="60" charge="20" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="26" restrict="3" cpuLevel="-1" gpuLevel="-1" fps="60" charge="20" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="28" restrict="3" cpuLevel="-1" gpuLevel="-1" fps="60" charge="20" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+            </screen_off-screen_off_in_charge-screen_lock_in_charge>
+            <screen_off_in_call-screen_off_in_charge_and_call-screen_lock_in_call>
+                <gear_config tempGear="10" restrict="0" cpuLevel="-1" gpuLevel="-1" fps="60" charge="15" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="13" restrict="0" cpuLevel="-1" gpuLevel="-1" fps="60" charge="15" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="15" restrict="1" cpuLevel="-1" gpuLevel="-1" fps="60" charge="15" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="16" restrict="0" cpuLevel="-1" gpuLevel="-1" fps="60" charge="15" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="17" restrict="0" cpuLevel="-1" gpuLevel="-1" fps="60" charge="15" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="18" restrict="1" cpuLevel="-1" gpuLevel="-1" fps="60" charge="15" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="19" restrict="0" cpuLevel="-1" gpuLevel="-1" fps="60" charge="15" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="20" restrict="2" cpuLevel="-1" gpuLevel="-1" fps="60" charge="15" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="23" restrict="2" cpuLevel="-1" gpuLevel="-1" fps="60" charge="15" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="24" restrict="3" cpuLevel="-1" gpuLevel="-1" fps="60" charge="15" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="26" restrict="3" cpuLevel="-1" gpuLevel="-1" fps="60" charge="15" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="28" restrict="3" cpuLevel="-1" gpuLevel="-1" fps="60" charge="15" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+            </screen_off_in_call-screen_off_in_charge_and_call-screen_lock_in_call>
+        </environment>
+        <default>
+            <common_config>
+                <gear_config tempGear="10" restrict="0" cpuLevel="-1" gpuLevel="-1" fps="-1" charge="-1" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="13" restrict="0" cpuLevel="-1" gpuLevel="-1" fps="-1" charge="15" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="15" restrict="1" cpuLevel="1" gpuLevel="-1" fps="90" charge="12" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="16" restrict="0" cpuLevel="1" gpuLevel="-1" fps="90" charge="12" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="17" restrict="0" cpuLevel="2" gpuLevel="-1" fps="90" charge="10" brightness="-1" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="18" restrict="1" cpuLevel="3" gpuLevel="-1" fps="60" charge="10" brightness="230" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="19" restrict="0" cpuLevel="3" gpuLevel="-1" fps="60" charge="10" brightness="230" modem="-1" torch="-1" bluetooth="-1" wifiHotSpot="-1" />
+                <gear_config tempGear="20" restrict="2" cpuLevel="4" gpuLevel="-1" fps="60" charge="8" brightness="204" modem="-1" torch="-1" bluetooth="0" wifiHotSpot="-1" />
+                <gear_config tempGear="21" restrict="2" cpuLevel="5" gpuLevel="-1" fps="60" charge="8" brightness="204" modem="-1" torch="-1" bluetooth="0" wifiHotSpot="-1" />
+                <gear_config tempGear="23" restrict="2" cpuLevel="6" gpuLevel="-1" fps="60" charge="5" brightness="178" modem="-1" torch="-1" bluetooth="0" wifiHotSpot="0" />
+                <gear_config tempGear="24" restrict="3" cpuLevel="7" gpuLevel="-1" fps="60" charge="5" brightness="178" modem="-1" torch="-1" bluetooth="0" wifiHotSpot="0" />
+                <gear_config tempGear="26" restrict="3" cpuLevel="8" gpuLevel="-1" fps="60" charge="3" brightness="153" modem="-1" torch="-1" bluetooth="0" wifiHotSpot="0" />
+                <gear_config tempGear="28" restrict="3" cpuLevel="8" gpuLevel="-1" fps="60" charge="3" brightness="153" modem="-1" torch="-1" bluetooth="0" wifiHotSpot="0" />
+            </common_config>
+        </default>
+    </thermalPolicyConfigItem>
+</sys_thermal_control_list>

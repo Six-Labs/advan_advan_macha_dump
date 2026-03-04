@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "//": "sys onstartprocess",
+  "sys-whitelist": [
+    "com.android.providers.contacts",
+    "com.google.android.inputmethod.latin"
+  ],
+  "sys-blacklist": [
+    "com.pri.longshotscreen",
+    "com.mediatek.sensorhub.ui",
+    "com.google.android.wifi.dialog"
+  ],
+  "///": "first process apps",
+  "important": [
+    "com.smile.gifmaker",
+    "com.ss.android.ugc.aweme",
+    "com.tencent.mm",
+    "com.ss.android.article.news",
+    "com.android.dialer",
+    "com.mediatek.camera",
+    "com.android.settings"
+  ],
+  "////": "dexopt with activity started,3g only some small apps",
+  "activity-list-3g": [
+    "com.android.launcher3",
+    "com.android.dialer",
+    "com.android.settings",
+    "com.android.deskclock",    
+    "com.whatsapp"
+  ],
+  "/////": "inlude activity-list-3g,4g top 50 app",
+  "activity-list-4g": [
+    "//for system apps",
+    "com.android.fmradio",
+    "com.android.gallery3d",   
+
+    "//for china apps",
+    "com.autonavi.minimap",
+    "com.smile.gifmaker",
+    "com.ss.android.ugc.aweme",
+    "com.tencent.mm",
+    "com.tencent.mobileqq",
+    "com.sina.weibo",
+    "com.ss.android.article.news",
+    "com.youku.phone",
+    "com.tencent.qqmusic",
+    "com.tencent.qqlive",
+    "com.taobao.taobao",
+    "com.netease.cloudmusic",
+    "com.qiyi.video"
+    
+  ]
+}

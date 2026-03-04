@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sys_app_switch_list>
+    <black-list />
+    <match-app-default-list>
+        <item>com.pri.thermal</item>
+    </match-app-default-list>
+    <match-activity-default-list>
+        <item>com.pri.thermal</item>
+    </match-activity-default-list>
+    <config-rule-infos />
+</sys_app_switch_list>

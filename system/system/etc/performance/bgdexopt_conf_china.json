@@ -1,0 +1,54 @@
+{
+	"version": 1,
+    "info":"1:everything 2:speed 3:speed-profile(default) ",
+	"3g-apps": [
+        "com.android.launcher3",
+        "com.pri.launcher3",
+        "com.android.systemui",
+        "com.android.settings",  
+        "com.android.dialer",
+        "com.android.contacts",
+        "com.android.deskclock",
+        
+        "com.smile.gifmaker",
+        "com.ss.android.article.news",
+        "com.ss.android.ugc.aweme",
+        "com.tencent.mm",
+        "com.tencent.mobileqq",
+        "com.autonavi.minimap"
+	],
+    "4g-apps": [
+        "com.android.providers.telephony:2",
+        "com.mediatek.telephony:2",
+        "com.android.phone:2",   
+        "com.android.providers.media:2",
+        "com.android.launcher3",
+        "com.pri.launcher3",
+        "com.android.systemui",
+        "com.android.settings:2",  
+        "com.android.dialer:2",
+        "com.android.contacts:2",
+        "com.android.deskclock:2",
+        "com.pri.filemanager:2",
+        "com.android.calendar:2",
+        "com.pri.calendar:2",
+        "com.prize.appcenter",
+        "com.pr.scuritycenter",
+        "com.prize.gamecenter",        
+
+        "com.smile.gifmaker",
+        "com.ss.android.article.news", 
+        "com.ss.android.ugc.aweme",
+        "com.tencent.mm",
+        "com.tencent.mobileqq",
+        "com.autonavi.minimap"
+	],
+    "black-list":[
+        "com.pri.morning.kill",
+        "com.pri.factorytest", 
+        "com.debug.loggerui",
+        "com.android.vpndialogs",
+        "com.google.android.cellbroadcastreceiver",
+        "com.google.android.networkstack.tethering"
+    ]
+}

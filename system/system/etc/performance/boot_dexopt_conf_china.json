@@ -1,0 +1,13 @@
+{
+	"version": 1,	
+    "bootdexopt_delay":120,
+    "///":"only config nande test app",
+    "bootdexopt":[
+        "com.ss.android.ugc.aweme",
+		"com.tencent.mm",
+		"com.smile.gifmaker",
+        "com.ss.android.article.news",
+
+        "com.android.settings"        
+    ]
+}

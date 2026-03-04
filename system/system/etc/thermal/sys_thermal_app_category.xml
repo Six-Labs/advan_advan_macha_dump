@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sys_thermal_app_category_list>
+
+    <version>2025102715</version>
+    <filter-name>sys_thermal_app_category_list</filter-name>
+
+    <array name="app_categories">
+        <!-- *** 音乐播放 *** -->
+        <!-- Lava测试项 -->
+        <value category="1">com.google.android.apps.youtube.music</value>
+        <!-- 覆盖应用(LAVA) -->
+        <value category="1">com.jio.media.jiobeats</value>
+        <value category="1">com.spotify.music</value>
+        <value category="1">com.radio.pocketfm</value>
+        <!-- Google应用市场Top20 -->
+        <value category="1">com.dywx.larkplayer</value>
+        <value category="1">com.apple.android.music</value>
+        <value category="1">com.amazon.mp3</value>
+        <value category="1">musicplayer.musicapps.music.mp3player</value>
+        <value category="1">com.pandora.android</value>
+        <value category="1">com.onlineradiofm.phonkmusic</value>
+        <value category="1">com.soundcloud.android</value>
+        <value category="1">com.hellosimply.simplysingdroid</value>
+        <value category="1">com.musicplayer.player.mp3player.white</value>
+        <value category="1">com.sirius</value>
+        <value category="1">mymusic.offlinemusicplayer.mp3player.playmusic</value>
+        <value category="1">com.starmakerinteractive.starmaker</value>
+        <value category="1">com.clearchannel.iheartradio.controller</value>
+        <value category="1">fmradio.radiostation.livefm.musicradio</value>
+        <value category="1">musicplayer.hdvideoplayer.backgroundmusic</value>
+        <value category="1">musicplayer.playmusic.audioplayer</value>
+        <value category="1">com.mmm.trebelmusic</value>
+
+        <!-- 视频播放 -->
+        <!-- Lava测试项 -->
+        <value category="2">com.google.android.youtube</value>
+        <value category="2">com.google.android.apps.photos</value>
+        <value category="2">com.youku.international.phone</value>
+        <!-- 覆盖应用(LAVA) -->
+        <value category="2">com.netflix.mediaclient</value>
+        <value category="2">com.iqiyi.i18n</value>
+        <value category="2">com.wondershare.filmorago</value>
+        <value category="2">org.videolan.vlc</value>
+        <value category="2">com.amazon.mShop.android.shopping</value>
+        <value category="2">com.mxtech.videoplayer.ad</value>
+        <value category="2">com.flipkart.android</value>
+        <value category="2">com.graymatrix.did</value>
+        <value category="2">com.playit.videoplayer</value>
+        <value category="2">com.kmplayer</value>
+        <value category="2">com.disney.disneyplus</value>
+        <value category="2">sg.bigo.live</value>
+        <value category="2">com.sonyliv</value>
+        <value category="2">com.mast.status.video.edit</value>
+        <value category="2">com.tencent.qqlivei18n.us</value>
+        <!-- Google应用市场Top20 -->
+        <value category="2">com.boostvision.player.iptv</value>
+        <value category="2">com.wbd.stream</value>
+        <value category="2">video.player.videoplayer</value>
+        <value category="2">com.turner.cnvideoapp</value>
+        <value category="2">com.bilibili.app.in</value>
+        <value category="2">top.piscess.pisces</value>
+        <value category="2">com.rocks.music.videoplayer</value>
+        <value category="2">org.xbmc.kodi</value>
+        <value category="2">maxplayer.video.videoplayer</value>
+        <value category="2">com.special.videoplayer</value>
+        <value category="2">com.tera.provid.iplayer</value>
+        <value category="2">iplayer.and.new.com</value>
+        <value category="2">com.ytv.pronew</value>
+        <value category="2">com.recorder.music.bstech.videoplayer</value>
+        <value category="2">com.rumble.battles</value>
+        <value category="2">com.instagram.android</value>
+        <value category="2">com.zhiliaoapp.musically</value>
+        <value category="2">com.facebook.katana</value>
+        <value category="2">com.facebook.orca</value>
+        <value category="2">com.whatsapp</value>
+        <value category="2">com.baitu.qingshu</value>
+
+        <!-- 中小型游戏 -->
+        <!-- Lava测试项 -->
+        <!-- 覆盖应用(LAVA) -->
+        <value category="3">com.rovio.baba</value>
+        <value category="3">com.miniclip.eightballpool</value>
+        <value category="3">com.dts.freefireth</value>
+        <value category="3">com.riotgames.league.wildrift</value>
+        <value category="3">com.ludo.king</value>
+        <value category="3">com.fingersoft.hillclimb</value>
+        <value category="3">com.tencent.ig</value>
+        <value category="3">com.ea.game.nfs14_row</value>
+        <value category="3">com.nianticlabs.pokemongo</value>
+        <!-- Google应用市场Top20 -->
+        <value category="3">com.wood.nut.and.bolts.puzzle</value>
+        <value category="3">com.studio27.MelonPlayground</value>
+        <value category="3">com.supercell.squad</value>
+        <value category="3">com.roblox.client</value>
+        <value category="3">com.hexa.master.puzzle.match3d</value>
+        <value category="3">com.robtopx.geometryjumplite</value>
+        <value category="3">com.desktop.garden</value>
+        <value category="3">com.youmusic.magictiles</value>
+        <value category="3">com.Polystation.BuildABabe</value>
+        <value category="3">io.supercent.pizzaidle</value>
+        <value category="3">com.bonnie.trafficescape</value>
+        <value category="3">com.tocaboca.tocalifeworld</value>
+        <value category="3">com.master.hotelmaster</value>
+        <value category="3">io.supercent.linkedcubic</value>
+        <value category="3">com.devilgame.trolllevel</value>
+        <value category="3">com.dreamgames.royalmatch</value>
+        <value category="3">com.block.juggle</value>
+        <value category="3">com.fun.lastwar.gp</value>
+        <value category="3">com.scopely.monopolygo</value>
+        <value category="3">com.king.speed.bc10.race.master</value>
+
+        <!-- 大型游戏 -->
+        <!-- Lava测试项 -->
+        <value category="4">jp.konami.pesam</value>
+        <value category="4">com.mobile.legends</value>
+        <value category="4">com.pubg.imobile</value>
+        <value category="4">com.dts.freefiremax</value>
+        <value category="4">com.kiloo.subwaysurf</value>
+        <value category="4">com.imangi.templerun</value>
+        <value category="4">com.imangi.templerun2</value>
+        <value category="4">com.dts.freefire.india</value>
+        <value category="4">com.king.candycrushsaga</value>
+        <value category="4">com.activision.callofduty.shooter</value>
+        <value category="4">com.gameloft.android.ANMP.GloftA8HM</value>
+        <value category="4">com.gameloft.android.ANMP.GloftA9HM</value>
+        <!-- 覆盖应用(LAVA) -->
+        <value category="4">com.miHoYo.GenshinImpact</value>
+        <!-- Google应用市场Top20 -->
+        <value category="4">com.tencent.ig</value>
+        <value category="4">com.gamedevltd.wwh</value>
+        <value category="4">com.riotgames.league.wildrift</value>
+        <value category="4">com.gamedevltd.modernstrike</value>
+
+        <!-- 摄像场景 -->
+        <!-- Lava测试项 -->
+        <value category="5">com.tencent.mm</value>
+        <!-- 覆盖应用(LAVA) -->
+        <value category="5">com.mediatek.camera</value>
+        <value category="5">com.skype.raider</value>
+        <value category="5">com.twitter.android</value>
+        <value category="5">org.telegram.messenger</value>
+        <value category="5">com.snapchat.android</value>
+        <value category="5">in.mohalla.video</value>
+        <value category="5">com.whatsapp.w4b</value>
+        <!-- Google应用市场Top20 -->
+        <value category="5">com.risingcabbage.hd.camera</value>
+        <value category="5">com.linecorp.b612.android</value>
+        <value category="5">com.commsource.beautyplus</value>
+        <value category="5">beauty.selfie.camera</value>
+        <value category="5">photoeditor.layout.collagemaker</value>
+        <value category="5">com.locationonphoto.gpsmapcamera.geotagging.gpscamera</value>
+        <value category="5">com.cyberlink.youcammakeup</value>
+        <value category="5">com.gpsmapcamera.live.map.geotag.gps</value>
+        <value category="5">photo.editor.photoeditor.photoeditorpro</value>
+        <value category="5">ai.photo.enhancer.photoclear</value>
+        <value category="5">beauty.hd.camera</value>
+        <value category="5">cosplay.ai.art.generator</value>
+
+        <!-- 浏览器 -->
+        <!-- Lava测试项 -->
+        <value category="6">com.google.android.googlequicksearchbox</value>
+        <value category="6">com.android.chrome</value>
+        <!-- 覆盖应用(LAVA) -->
+        <value category="6">bbc.mobile.news.ww</value>
+        <value category="6">com.nis.app</value>
+        <value category="6">com.ak.ta.dainikbhaskar.activity</value>
+        <value category="6">com.eterno</value>
+        <!-- Google应用市场Top20 -->
+        <value category="6">mobi.mgeek.TunnyBrowser</value>
+        <value category="6">com.transsion.phoenix</value>
+        <value category="6">com.microsoft.emmx</value>
+        <value category="6">org.torproject.torbrowser</value>
+        <value category="6">org.adblockplus.browser</value>
+        <value category="6">com.sec.android.app.sbrowser</value>
+        <value category="6">com.tcl.browser</value>
+        <value category="6">com.kiwibrowser.browser</value>
+        <value category="6">com.ecosia.android</value>
+        <value category="6">com.brave.browser</value>
+        <value category="6">com.talpa.hibrowser</value>
+        <value category="6">com.securex.browser</value>
+        <value category="6">com.duckduckgo.mobile.android</value>
+        <value category="6">com.yandex.browser</value>
+        <value category="6">com.mi.globalbrowser</value>
+        <value category="6">privacy.explorer.fast.safe.browser</value>
+        <value category="6">org.mozilla.firefox</value>
+        <value category="6">com.opera.browser</value>
+        <value category="6">com.heytap.browser</value>
+
+        <!-- 跑分 -->
+        <!-- Lava测试项 -->
+        <!-- 覆盖应用(LAVA) -->
+        <value category="7">com.af.benchaf</value>
+        <value category="7">com.ludashi.benchmark</value>
+        <value category="7">com.primatelabs.geekbench6</value>
+        <value category="7">com.antutu.ABenchMark</value>
+        <value category="7">com.antutu.benchmark.full.lite</value>
+        <!-- Google应用市场Top20 -->
+        <value category="7">org.benchmark.demo</value>
+        <value category="7">com.futuremark.dmandroid.application</value>
+        <value category="7">com.ludashi.aibench</value>
+        <value category="7">com.andromeda.androbench2</value>
+        <value category="7">com.glbenchmark.glbenchmark27</value>
+        <value category="7">com.futuremark.pcmark.android.benchmark</value>
+
+        <!-- *** 导航 *** -->
+        <!-- Google应用市场Top20 -->
+        <value category="8">com.appscourt.livestreetview.gps.maps.travelnavigation.apps</value>
+        <value category="8">com.virtualmaze.offlinemapnavigationtracker</value>
+        <value category="8">com.sharlocation.friend.family</value>
+        <value category="8">com.gps.phonelocation.tracker.locatorsharing.maps</value>
+        <value category="8">com.radarapp.trip.speedometer</value>
+        <value category="8">com.live.voice.navigation.driving.directions.gps.maps</value>
+        <value category="8">com.waze</value>
+        <value category="8">com.maps.radar.mapapp22</value>
+        <value category="8">com.gps.location.live.earth.map.diriving.direction.weather.voice.navigation</value>
+        <value category="8">in.appstar.findfriends</value>
+        <value category="8">onxmaps.offroad</value>
+        <value category="8">com.voice.gps.driving.directions.gps.navigation.maps.location</value>
+        <value category="8">com.thetransitapp.droid</value>
+        <value category="8">com.maps.voice.navigation.traffic.gps.location.route.driving.directions</value>
+        <value category="8">com.maps.radar.navigation.android2023</value>
+        <value category="8">com.locator.gps.trackinglocation</value>
+        <value category="8">com.goxradar.hudnavigationapp21</value>
+        <value category="8">org.rajman.neshan.traffic.tehran.navigator</value>
+        <value category="8">com.maps.locator.gps.gpstracker.phone</value>
+
+        <!-- *** 手机搬家 *** -->
+        <!-- Google应用市场Top20 -->
+        <value category="9">com.dada.syn</value>
+        <value category="9">com.tencent.android.qqdownloader</value>
+        <value category="9">com.tencent.transfer</value>
+        <value category="9">com.softin.copydata</value>
+        <value category="9">com.wpcloud.change</value>
+
+        <!-- *** 桌面 *** -->
+        <!-- Google应用市场Top20 -->
+        <value category="10">cszf.qxbz.soihbg</value>
+        <value category="10">com.qisi.wallpaper</value>
+        <value category="10">com.zsyj.wallpaper</value>
+        <value category="10">com.jeejen.family</value>
+        <value category="10">com.cmcm.cfwallpaper</value>
+
+        <!-- *** 阅读 *** -->
+        <!-- Google应用市场Top20 -->
+        <value category="11">com.baidu.wenku</value>
+        <value category="11">com.kuaikan.comic</value>
+        <value category="11">com.qidian.QDReader</value>
+        <value category="11">com.tipsoon.android</value>
+        <value category="11">com.dragon.read</value>
+
+        <!-- *** 运动 *** -->
+        <!-- Google应用市场Top20 -->
+        <value category="12">com.gkid.crazyrope</value>
+        <value category="12">co.runner.app</value>
+        <value category="12">com.qsmy.walkmonkey</value>
+        <value category="12">com.gotokeep.keep</value>
+        <value category="12">cn.ledongli.ldl</value>
+
+        <!-- *** 邮箱 *** -->
+        <!-- Google应用市场Top20 -->
+        <value category="13">com.google.android.gm</value>
+        <value category="13">me.bluemail.mail</value>
+        <value category="13">com.easilydo.mail</value>
+        <value category="13">com.yahoo.mobile.client.android.mail</value>
+        <value category="13">ru.yandex.mail</value>
+
+        <!-- *** 词典 *** -->
+        <!-- Google应用市场Top20 -->
+        <value category="14">com.youdao.hindict</value>
+        <value category="14">livio.pack.lang.en_US</value>
+        <value category="14">com.mobisystems.msdict.embedded.wireless.oxford.dictionaryofenglish</value>
+        <value category="14">free.translate.all.language.translator</value>
+
+        <!-- *** 输入法 *** -->
+        <!-- Google应用市场Top20 -->
+        <value category="15">com.google.android.inputmethod.latin</value>
+        <value category="15">com.sohu.inputmethod.sogou</value>
+        <value category="15">com.baidu.input</value>
+        <value category="15">com.tencent.qqpinyin</value>
+        <value category="15">com.iflytek.inputmethod</value>
+
+        <!-- 图库类，category 16 -->
+        <value category="16">com.google.android.apps.photos</value>
+        <value category="16">com.thinkyeah.galleryvault</value>
+        <value category="16">com.tencent.gallerymanager</value>
+        <value category="16">com.baidu.youavideo</value>
+        <value category="16">com.picture.editor</value>
+
+        <!-- 婚恋类，category 17 -->
+        <value category="17">com.baihe</value>
+        <value category="17">com.jiayuan</value>
+        <value category="17">com.zhenai.android</value>
+        <value category="17">com.wepie.ivy</value>
+        <value category="17">me.yidui</value>
+
+        <!-- 电台类，category 18 -->
+        <value category="18">com.shinyv.cnr</value>
+        <value category="18">cn.kuwo.tingshu</value>
+        <value category="18">com.ximalaya.ting.android</value>
+        <value category="18">com.yibasan.lizhifm</value>
+        <value category="18">com.uxin.kilaaudio</value>
+
+        <!-- 工具类，category 19 -->
+        <value category="19">com.pcncn.jj</value>
+        <value category="19">com.xunlei.downloadprovider</value>
+        <value category="19">com.snda.wifilocating</value>
+        <value category="19">com.duokan.phone.remotecontroller</value>
+        <value category="19">com.kuaiduizuoye.scan</value>
+
+        <!-- 银行类，category 20 -->
+        <value category="20">com.chinamworld.main</value>
+        <value category="20">com.icbc</value>
+        <value category="20">com.yitong.mbank.psbc</value>
+        <value category="20">com.android.bankabc</value>
+        <value category="20">cmb.pb</value>
+
+        <!-- 金融类，category 21 -->
+        <value category="21">com.cloudpower.netsale.activity</value>
+        <value category="21">com.xdqh.hengsheng</value>
+        <value category="21">com.pingan.lifeinsurance</value>
+        <value category="21">com.eastmoney.android.berlin</value>
+        <value category="21">com.hexin.plat.android</value>
+
+        <!-- 支付类，category 22 -->
+        <value category="22">com.chinatelecom.bestpayclient</value>
+        <value category="22">com.cmcc.hebao</value>
+        <value category="22">com.eg.android.AlipayGphone</value>
+        <value category="22">com.bankcomm.maidanba</value>
+        <value category="22">com.unionpay</value>
+
+        <!-- 听书类，category 23 -->
+        <value category="23">com.ks.kaishustory</value>
+        <value category="23">io.dushu.fandengreader</value>
+        <value category="23">com.xs.fm</value>
+        <value category="23">bubei.tingshu</value>
+
+        <!-- 交通类，category 24 -->
+        <value category="24">com.ygkj.chelaile.standard</value>
+        <value category="24">com.szt.pay</value>
+        <value category="24">com.tmri.app.main</value>
+        <value category="24">com.lalamove.huolala.client</value>
+        <value category="24">com.jingyao.easybike</value>
+
+        <!-- 驾考类，category 25 -->
+        <value category="25">com.runbey.ybjk</value>
+        <value category="25">com.cg.driver.exam.ddt</value>
+        <value category="25">com.jxedt</value>
+        <value category="25">com.jiazheng.shishiyu</value>
+
+        <!-- 旅行类，category 26 -->
+        <value category="26">ctrip.android.view</value>
+        <value category="26">com.Qunar</value>
+        <value category="26">com.tuniu.app.ui</value>
+        <value category="26">com.tongcheng.android</value>
+
+        <!-- 手机安全类，category 27 -->
+        <value category="27">com.tencent.qqpimsecure</value>
+        <value category="27">kaiqi.mobileguard</value>
+        <value category="27">com.tencent.token</value>
+        <value category="27">cn.opda.a.phonoalbumshoushou</value>
+
+        <!-- 文件管理类，category 28 -->
+        <value category="28">com.google.android.apps.nbu.files</value>
+        <value category="28">com.wlhtech.file</value>
+        <value category="28">com.folder.management</value>
+        <value category="28">com.ds.file</value>
+        <value category="28">bin.mt.plus</value>
+
+        <!-- 健康类，category 29 -->
+        <value category="29">com.dw.btime</value>
+        <value category="29">com.babytree.apps.pregnancy</value>
+        <value category="29">com.boohee.one</value>
+        <value category="29">cn.dxy.android.aspirin</value>
+        <value category="29">com.lingan.seeyou</value>
+
+        <!-- 办公类，category 30 -->
+        <value category="30">com.intsig.camscanner</value>
+        <value category="30">com.tencent.wework</value>
+        <value category="30">com.tencent.wemeet.app</value>
+        <value category="30">com.alibaba.android.rimet</value>
+        <value category="30">net.xmind.doughnut</value>
+
+        <!-- 教育类，category 31 -->
+        <value category="31">com.fenbi.android.solar</value>
+        <value category="31">com.zmzx.college.search</value>
+        <value category="31">com.baidu.homework</value>
+        <value category="31">com.xuexiaoyi.xxy</value>
+        <value category="31">cn.xuexi.android</value>
+
+        <!-- 社交类，category 32 -->
+        <value category="32">com.instagram.android</value>
+        <value category="32">com.facebook.katana</value>
+        <value category="32">com.google.android.youtube</value>
+        <value category="32">com.instagram.barcelona</value>
+        <value category="32">com.twitter.android</value>
+        <value category="32">in.mohalla.sharechat</value>
+        <value category="32">com.pinterest</value>
+        <value category="32">com.reddit.frontpage</value>
+        <value category="32">com.baitu.qingshu</value>
+        <value category="32">com.facebook.orca</value>
+        <value category="32">com.whatsapp</value>
+        <value category="32">com.tencent.mm</value>
+        <value category="32">com.zhiliaoapp.musically</value>
+    </array>
+</sys_thermal_app_category_list>

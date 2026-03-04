@@ -1,0 +1,56 @@
+{
+  "version": 2,
+  "3g-config":{
+     "proc-adj":[
+     ],
+     "proc-persist":[
+     ],
+     "pkg-persist":[
+     	"com.pri.superflashlight"
+     ],
+     "task-remove-ignore":[
+        "com.dobest.dynamic"
+     ]
+  },
+  "4g-config":{
+     "proc-adj":[
+     ],
+     "proc-persist":[
+     ],
+     "pkg-persist":[
+	"com.pri.superflashlight"
+     ],
+     "task-remove-ignore":[
+        "com.dobest.dynamic"
+     ]
+  },
+  "6g-config":{
+     "proc-adj":[       
+       "com.pri.bgvideo;800",
+       "com.google.android.setupwizard;800" 
+     ],
+     "proc-persist":[
+     ],
+     "pkg-persist":[
+	"com.pri.superflashlight"
+     ],
+     "task-remove-ignore":[
+       "com.whatsapp",
+       "com.tencent.mm",
+       "com.tencent.wework",
+       "com.facebook.lite",
+       "com.facebook.katana",
+       "com.google.android.youtube",
+       "com.dobest.dynamic",
+       "com.pri.applock"
+     ]
+  },
+  "freezer-whitelist": [
+    "com.whatsapp",
+     "com.tencent.mm",
+     "com.facebook.orca",
+     "com.dobest.dynamic",
+     "com.google.android.gms",
+     "com.pri.featureX"
+  ]
+}

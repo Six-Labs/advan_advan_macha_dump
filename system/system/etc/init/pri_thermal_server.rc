@@ -1,0 +1,5 @@
+service pri.thermal-service /system/bin/pri.thermal-service
+        class main
+        user system
+        group system
+        seclabel u:r:pri_thermal_server:s0
