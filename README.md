@@ -1,0 +1,14 @@
+# user 15 AP3A.240905.015.A2 1764258709 release-keys
+- manufacturer: advan
+- platform: common
+- codename: ADVAN_MACHA
+- flavor: user
+- release: 15
+- id: AP3A.240905.015.A2
+- incremental: 1764258709
+- tags: release-keys
+- fingerprint: ADVAN/ADVAN_MACHA/ADVAN_MACHA:15/AP3A.240905.015.A2/1764258709:user/release-keys
+- is_ab: true
+- brand: ADVAN
+- branch: user-15-AP3A.240905.015.A2-1764258709-release-keys
+- repo: advan_advan_macha_dump
