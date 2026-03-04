@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+
+<!-- prize add by fengzhengcai. ultra save power. 20240806 -->
+<!-- 格式为：App home component#在PriPowerSaveModeLauncher省电Launcher的界面位置#userId -->
+<pri_ultra_power_save>
+<applist_in_ultrasave>
+<appname>com.google.android.dialer/.extensions.GoogleDialtactsActivity#0#0</appname>
+<appname>com.google.android.apps.messaging/.ui.ConversationListActivity#1#0</appname>
+<appname>com.google.android.contacts/com.android.contacts.activities.PeopleActivity#2#0</appname>
+</applist_in_ultrasave>
+</pri_ultra_power_save>
